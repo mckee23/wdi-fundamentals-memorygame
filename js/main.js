@@ -2,10 +2,17 @@
 /*console.log("User flipped " + cardOne);
 console.log("User flipped " + cardTwo);*/
 
-//will probably be deleting the top code for the new below
-
 var cards = ["queen", "queen", "king", "king"];
 var cardsInPlay = [];
+var checkForMatch = function(){
+  if(cardsInPlay[0] === cardsInPlay[1]){
+    console.log("You found a match!");
+  }else{
+    console.log("Sorry, try again.");
+  }
+}
+checkForMatch();
+
 var flipCard = function(cardID){
   console.log("User flipped" + " " + cards[cardID]);
   cardsInPlay.push(cards[cardID]);
@@ -17,14 +24,17 @@ var flipCard = function(cardID){
       }
     }
 }
+
 flipCard(0);
 flipCard(2);
 
-/*var cardOne = cards[0];
+/*var cards = ["queen", "queen", "king", "king"];
+var cardsInPlay = [];
+var cardOne = cards[0];
 cardsInPlay.push[0];
 console.log("User flipped" + " " + cards[0]);
-var cardTwo = cards[3];
-cardsInPlay.push[3];
+var cardTwo = cards[2];
+cardsInPlay.push[2];
 console.log("User flipped" + " " + cards[3]);
 if (cardsInPlay.length === 2){
   if(cardsInPlay[0] === cardsInPlay[1]){
